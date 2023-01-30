@@ -1,0 +1,16 @@
+.precio{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2C74B3;
+    padding: 1rem;
+    border-radius: 5%;
+
+
+}
+
+
+.precios{
+      display: flex; 
+      justify-content: space-around;
+      padding-top: 3rem;
+}

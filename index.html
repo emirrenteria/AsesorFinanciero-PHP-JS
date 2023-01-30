@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Asesores Financieros</title>
+
+    <!-- ===============  Link de fontawesome ================== -->
+    <script src="https://kit.fontawesome.com/2b6905ddea.js" crossorigin="anonymous"></script>
+
+    <!-- ================== ESTILOS CSS ==================== -->
+
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/cabecera.css" rel="stylesheet" />
+    <link href="./assets/css/menu/menu-item.css" rel="stylesheet" />
+    <link href="./assets/css/menu/menu-link.css" rel="stylesheet" />
+    <link href="./assets/css/menu/menu-lista.css" rel="stylesheet" />
+    <link href="./assets/css/banner/banner.css" rel="stylesheet" />
+    <link href="./assets/css/banner/banner-titulo.css" rel="stylesheet" />
+    <link href="./assets/css/banner/banner-imagen.css" rel="stylesheet" />
+    <link href="./assets/css/sobre/sobre.css" rel="stylesheet" />
+    <link href="./assets/css/sobre/sobre-titulo.css" rel="stylesheet" />
+    <link href="./assets/css/sobre/sobre-descripcion.css" rel="stylesheet" />
+    <link href="./assets/css/precios/precio.css" rel="stylesheet">
+    <link href="./assets/css/precios/precio-usuario.css" rel="stylesheet">
+    <link href="./assets/css/precios/precio-valor.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion-titulo.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion-descripcion.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion-container.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion-input.css" rel="stylesheet">
+    <link href="./assets/css/cotizacion/cotizacion-button.css" rel="stylesheet">
+    <link href="./assets/css/warnings.css" rel="stylesheet">
+    <link href="./assets/css/pie-de-pagina.css" rel="stylesheet" />
+    <link href="./assets/css/logo.css" rel="stylesheet" />
+
+    <!-- ================== ESTILOS CSS BOOTSTRAP ================== -->
+    <link href="./plugins/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+    <header class="cabecera">
+        <img class="logo" src="./assets/img/logo.png" alt="Fruto y Fruta">
+        <nav class="menu">
+            <ul class="menu__lista">
+                <li class="menu__item"> <a class="menu__link activo" href="#">Inicio</a> </li>
+                <li class="menu__item"> <a class="menu__link" href="somos.html">¿Quienes somos?</a> </li>
+                <li class="menu__item"> <a class="menu__link" href="testimonios.html">Testimonios</a> </li>
+                <li class="menu__item"> <a class="menu__link" href="contacto.html">Contactanos</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner__imagen"> </div>
+        <h2 class="banner__titulo">Asesoría en Planes de Jubilación, Educación y Protección Familiar.</h2>
+    </section>
+    <section class="sobre">
+        <h2 class="sobre__titulo">Inversión financiera de confianza en Cali</h2>
+        <p class="sobre__descripcion">¿Te preocupan tus ingresos económicos? ¿Se acerca la cuesta de enero?
+             Nosotros solucionaremos tus problemas. Si buscas una forma sensata de invertir dinero, ven a Finance & Life 
+             y tu futuro económico estará garantizado. Ubicados en Cali, te asesoramos para engrosar tu cuenta bancaria.
+              Llama al +573053419644 e invierte en la calidad de nuestros asesores financieros.
+        </p>  
+        <div class="precios">
+            <div class="precio">
+                <div> <i class="fa-solid fa-person"></i> </div>
+                <span class="precio__usuario">  Personas </span>
+                <span class="precio__valor"> Precio: $60,000 pesos x hora</span>
+            </div>
+            <div class="precio">
+                <div> <i class="fa-solid fa-building"></i> </div>
+                <span class="precio__usuario">  Empresas </span>
+                <span class="precio__valor"> Precio: $110,000 pesos x hora</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cotizacion">
+        <h2 class="cotizacion__titulo">Hable con un asesor</h2>
+        <p class="cotizacion__descripcion"> Comple el siguiente formulario y reciba toda la informacion que necesita  </p>
+        <p class="cotizacion__descripcion"> para poder tomardecisiones importantes sobre su futuro. </p>
+        
+        <div class="container cotizacion__container ">
+        <div class="row justify-content-center">
+        <div class="col-6">
+        <form method="POST" action="enviar.php" id="form">        
+        <div class="card">
+        <div class="card-body">
+             <input type="text" class="form-control cotizacion__input" name="nombre" id="nombre" placeholder="Nombre Completo">
+             <input type="text" class="form-control cotizacion__input" name="asunto" id="asunto" placeholder="asunto">
+             <input type="tel" class="form-control cotizacion__input" name="telefono" id="telefono" placeholder="Telefono">
+             <input type="email" class="form-control cotizacion__input" name="email" id="email" placeholder="Email">
+             <select class="form-control cotizacion__input" name="tipoUsuario" id="tipoUsuario" >
+                <option value="">Seleccione el tipo de usuario</option>
+                <option value="Persona">Persona</option>
+                <option value="Empresa">Empresa</option>
+             </select>
+          <textarea class="form-control cotizacion__input" name="mensaje" id="mensaje" rows="10" cols="50"> Escriba un mensaje aqui</textarea>
+
+        </div>
+            <p class="warnings" id="warnings"></p>
+            <button  type="submit" name="submit" class="btn btn-outline-success form-control cotizacion__button">Enviar mensaje </button> 
+            <button  type="reset" class="btn btn-outline-danger form-control cotizacion__button">Limpiar Formulario </button>
+        </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+   
+    <footer class="pie-de-pagina">
+        Contado: ejemplo@hotmail.com
+    </footer>
+   <script src="./assets/js/app.js" type="module"></script>
+</body>
+
+</html>

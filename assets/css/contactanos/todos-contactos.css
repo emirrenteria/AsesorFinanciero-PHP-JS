@@ -1,0 +1,10 @@
+.contacto{
+    display: flex;
+    flex-direction: column;
+}
+
+.todos__contactos{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
